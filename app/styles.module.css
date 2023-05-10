@@ -1,0 +1,47 @@
+.header {
+  @apply p-5 border-b lg:flex lg:justify-center;
+}
+
+.mobileHeader {
+  @apply flex w-full justify-between items-center lg:hidden;
+}
+
+.desktopHeader {
+  @apply hidden lg:flex justify-between items-center;
+}
+
+.linksContainer {
+  @apply flex justify-between items-center w-full pl-9;
+}
+
+.linkButton {
+  @apply px-2 text-sm;
+}
+
+.buttonsContainer {
+  @apply grid grid-flow-col gap-1 w-full;
+}
+
+.signUpButton {
+  @apply text-sm bg-primary text-white p-1 rounded-full;
+}
+
+.mainContent {
+  @apply grid grid-flow-row mx-auto justify-center mt-10;
+}
+
+.row {
+  @apply grid grid-flow-col gap-2 justify-start items-center;
+}
+
+.col {
+  @apply grid grid-flow-row gap-6 lg:gap-4;
+}
+
+.coloredSquare {
+  @apply bg-[#f8b21d] w-4 h-4 rounded-[4px];
+}
+
+.semibold {
+  @apply font-semibold;
+}
