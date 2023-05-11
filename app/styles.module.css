@@ -1,5 +1,5 @@
 .header {
-  @apply p-5 border-b lg:flex lg:justify-center;
+  @apply p-5 border-b flex items-center justify-center;
 }
 
 .mobileHeader {
@@ -7,7 +7,7 @@
 }
 
 .desktopHeader {
-  @apply hidden lg:flex justify-between items-center;
+  @apply hidden lg:flex justify-center items-center w-[1280px] mx-auto;
 }
 
 .linksContainer {
@@ -18,12 +18,8 @@
   @apply px-2 text-sm;
 }
 
-.buttonsContainer {
-  @apply grid grid-flow-col gap-1 w-full;
-}
-
 .signUpButton {
-  @apply text-sm bg-primary text-white p-1 rounded-full;
+  @apply text-sm bg-primary text-white px-3 py-2 rounded-full;
 }
 
 .mainContent {
@@ -44,4 +40,8 @@
 
 .semibold {
   @apply font-semibold;
+}
+
+.input {
+  @apply mb-3 font-semibold rounded-md border-gray-400 disabled:bg-gray-100;
 }

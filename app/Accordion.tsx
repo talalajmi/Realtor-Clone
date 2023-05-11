@@ -31,7 +31,7 @@ const Accordion = ({
   svg,
 }: {
   title: string;
-  content: string;
+  content: ReactNode;
   svg: ReactNode;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +56,7 @@ const Accordion = ({
       </button>
       {isOpen && (
         <div className="p-4">
-          <p>{content}</p>
+          <div>{content}</div>
         </div>
       )}
     </div>

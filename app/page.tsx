@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import Accordion from "./Accordion";
+import { CalculateUtilityForm } from "./CalculateUtilityForm";
 
 export default function Home() {
   return (
@@ -55,8 +56,9 @@ export default function Home() {
             alt="logo"
             width={150}
             height={150}
+            className="mr-9"
           />
-          <div className={styles.linksContainer}>
+          <div className={styles.row}>
             <button className={styles.linkButton}>Buy</button>
             <button className={styles.linkButton}>Sell</button>
             <button className={styles.linkButton}>Rent</button>
@@ -64,16 +66,16 @@ export default function Home() {
             <button className={styles.linkButton}>Find Realtors</button>
             <button className={styles.linkButton}>My Home</button>
             <button className={styles.linkButton}>News & Insights</button>
+            <div className={styles.row}>
+              <button className="hidden xl:block text-sm border py-1 px-2 rounded-md border-black mx-2">
+                Manage Rentals
+              </button>
+              <button className="border text-sm py-1 px-2 rounded-md border-black">
+                Advertise
+              </button>
+            </div>
           </div>
-          <div className="flex mx-5 w-full">
-            <button className="hidden text-sm border py-1 px-2  rounded-md  border-black mx-2">
-              Manage Rentals
-            </button>
-            <button className="border text-sm py-1 px-2 rounded-md border-black">
-              Advertise
-            </button>
-          </div>
-          <div className={styles.buttonsContainer}>
+          <div className={styles.row}>
             <button className="px-4 text-sm">Log In</button>
             <button className={styles.signUpButton}>Sign Up</button>
           </div>
@@ -101,9 +103,9 @@ export default function Home() {
             <div className={styles.row}>
               <p className={`text-2xl ${styles.semibold}`}>$499,900</p>
               <p className="ml-5">
-                Est.{" "}
+                Est.
                 <span className="text-blue-700">
-                  $3,209/mo{" "}
+                  $3,209/mo
                   <svg
                     data-testid="icon-edit"
                     viewBox="0 0 512 512"
@@ -281,8 +283,8 @@ export default function Home() {
                   <path d="M325 196H193c-20-4-34-22-34-42 0-21 14-38 34-42h132c20 4 34 21 34 42 0 20-14 38-34 42zm-132-67c-12 1-22 12-22 25s10 24 22 25h132c13-1 22-12 22-25s-9-24-22-25zm3 181c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm80-66c0-10-8-19-19-19s-20 9-20 19c0 11 9 20 20 20s19-9 19-20zm79 0c0-10-8-19-19-19s-20 9-20 19c0 11 9 20 20 20s19-9 19-20zm-79 66c0-11-8-20-19-20s-20 9-20 20 9 20 20 20 19-9 19-20zm79 0c0-11-8-20-19-20s-20 9-20 20 9 20 20 20 19-9 19-20zm-159 65c0-10-9-19-20-19s-20 9-20 19c0 11 9 20 20 20s20-9 20-20zm80 0c0-10-8-19-19-19s-20 9-20 19c0 11 9 20 20 20s19-9 19-20zm-80-131c0-10-9-19-20-19s-20 9-20 19c0 11 9 20 20 20s20-9 20-20zm167 225H149c-31 0-57-25-57-57V100c0-32 26-57 57-57h214c31 0 57 25 57 57v312c0 32-26 57-57 57zM149 73c-15 0-27 12-27 27v312c0 15 12 27 27 27h214c15 0 27-12 27-27V100c0-15-12-27-27-27z"></path>
                 </svg>
               }
-              title="Utils"
-              content="lorem ipsum "
+              title="Utility Calculator"
+              content={<CalculateUtilityForm />}
             />
             <Accordion
               svg={
